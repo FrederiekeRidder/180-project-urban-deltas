@@ -1,0 +1,113 @@
+#logo{
+    height:100px;
+    background-color:#00A978;
+}
+
+#logoPNG{
+    height:100px;
+}
+
+#tagline{
+    height:100px;
+    background-color:darkgrey; 
+}
+
+#menu{
+    height:100px;
+    background-color:lightblue; 
+}
+
+#linksboven{
+    height:50px;
+    background-color:#C7705C; 
+}
+
+#rechtsboven{
+    height:50px;
+    background-color:#00A978;  
+}
+
+#linksonder{
+    height:50px;
+    background-color:#F0AD27; 
+}
+
+#rechtsonder{
+    height:50px;
+    background-color:#74388F; 
+}
+
+#mapsMRD{
+    height:400px;
+    background-color:dimgrey;  
+}
+
+#mapsGD{
+    height:400px;
+    background-color:lightgrey;  
+}
+
+#introMRD{
+    height:100px;
+    background-color:lightgrey;  
+}
+
+#introGD{
+    height:100px;
+    background-color:dimgrey;  
+}
+
+#klimaatInhoud{
+    height:300px;
+    background-color:#F0AD27;  
+}
+
+#testGIF{
+    height:250px;
+    width:250px;
+}
+
+#content1{height:150px;
+    background-color:black; 
+    color: white;
+}
+
+#content2{height:150px;
+    background-color:#87C4A5;  
+}
+
+#content3{height:150px;
+    background-color:black;
+    color: white;
+}
+
+#content4{
+    height:150px;
+    background-color:#F6CA7F;  
+}
+
+#ondergrondInhoud{
+    height:150px;
+    background-color:#00A978;  
+}
+
+#content5{
+    height:150px;
+    background-color:#9E7BB2;  
+}
+
+#content6{
+    height:150px;
+    background-color:#D9A08E;  
+}
+
+#verstedelijkingInhoud{
+    height:150px;
+    background-color:C7705C; 
+}
+
+/*Leaflet map*/
+#map { 
+  height: 500px; 
+  width:100%;
+} 
