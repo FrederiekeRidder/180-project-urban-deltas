@@ -1,15 +1,18 @@
 #logo{
-    height:100px;
-    background-color:#00A978;
+    height:200px;
+    background-color:white;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
 #logoPNG{
-    height:100px;
+    height:180px;
+    align-content: center
 }
 
 #tagline{
     height:100px;
-    background-color:darkgrey; 
+    background-color:white; 
 }
 
 #menu{
@@ -67,16 +70,25 @@
     width:250px;
 }
 
-#content1{height:150px;
+#content1{
+    height:300px;
     background-color:black; 
     color: white;
 }
 
-#content2{height:150px;
+#MississippiLandLoss{
+    height:300px;
+    background-color:#87C4A5;
+    padding:0
+}
+
+#MississippiGIF{
+    height:250px;
     background-color:#87C4A5;  
 }
 
-#content3{height:150px;
+#content3{
+    height:300px;
     background-color:black;
     color: white;
 }
