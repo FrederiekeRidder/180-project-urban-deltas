@@ -1,3 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Ropa+Sans);
+
+/*Text*/
+H2 {font-family: 'Ropa Sans', sans-serif; 
+    font-size: 22px; 
+    color: #00A978;
+    text-align: center
+}
+
+H3 {font-family: 'Ropa Sans', sans-serif; 
+    font-size: 22px; 
+    color: white;
+    text-align: center
+}
+
+/*Menu bar*/
 #logo{
     height:200px;
     background-color:white;
@@ -14,34 +30,54 @@
 
 #tagline{
     height:100px;
-    background-color:white; 
+    background-color:white;
+    padding-top:70px;
 }
 
 #menu{
-    height:100px;
+    height:200px;
     background-color:lightblue; 
 }
 
-#linksboven{
-    height:50px;
-    background-color:#C7705C; 
+#menuVerstedelijking{
+    height:100px;
+    background-color:#C7705C;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
 }
 
 #rechtsboven{
-    height:50px;
+    height:100px;
     background-color:#00A978;  
 }
 
-#linksonder{
-    height:50px;
+#menuKlimaat{
+    height:100px;
     background-color:#F0AD27; 
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
 }
 
 #rechtsonder{
-    height:50px;
+    height:100px;
     background-color:#74388F; 
 }
 
+#iconVerstedelijking{
+    height:80px;
+    background-color:#C7705C;
+}
+
+#iconKlimaat{
+    height:80px;
+    background-color:#F0AD27;
+}
+
+/*A*/
 #mapsMRD{
     height:400px;
     background-color:dimgrey;  
@@ -53,13 +89,15 @@
 }
 
 #introMRD{
-    height:100px;
-    background-color:lightgrey;  
+    height:300px;
+    background-color:lightgrey;
+    padding-top:30px;
 }
 
 #introGD{
-    height:100px;
+    height:300px;
     background-color:dimgrey;  
+    padding-top:30px;
 }
 
 #klimaatInhoud{
