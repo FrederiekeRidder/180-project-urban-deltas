@@ -71,25 +71,13 @@
         </div>
 
 
-          <!--<MRD leaflet map>-->
+          <!--<Leaflet map>-->
 
         <script>
   //initialize the map         
-  var map = L.map('map').setView([30.798474, -14.0625], 3);
+  var map = L.map('map').setView([40.04443758, -13.44726562], 3);
           var marker = L.marker([29.951255, -90.077158]).addTo(map);
           var libary = L.marker([23.762321, 90.378737]).addTo(map);
-libary.bindPopup(popup);
-          var circle = L.circle([42.359116, -71.049592], 500, {
-  color: 'green',
-  fillColor: '#228429',
-  fillOpacity: 0.5
-}).addTo(map);
-          
-          var polygon = L.polygon([
-  [42.349239, -71.041342],
-  [42.356512, -71.058852],
-  [42.364970, -71.060161]
-]).addTo(map);
   
   //Create baselayer - tiles         
   var backgroundMap = L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png',{
