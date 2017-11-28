@@ -79,6 +79,11 @@
           var marker = L.marker([29.951255, -90.077158]).addTo(map);
           var libary = L.marker([23.762321, 90.378737]).addTo(map);
   
+           var popup = "New Orleans";
+NewOrleans.bindPopup(popup);
+  var popup = "Dhaka";
+Dhaka.bindPopup(popup);
+          
   //Create baselayer - tiles         
   var backgroundMap = L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png',{
     attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
