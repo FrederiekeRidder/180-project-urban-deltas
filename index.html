@@ -80,9 +80,18 @@
 
         <script>
   //initialize the map         
-  var map = L.map('map').setView([40.04443758, -13.44726562], 2);
-          var NewOrleans = L.marker([29.951255, -90.077158]).addTo(map);
-          var Dhaka = L.marker([23.762321, 90.378737]).addTo(map);
+  var greenIcon = new L.Icon({
+      iconUrl: '/Images/markerGreen.png',
+      iconSize: [25, 35],
+      iconAnchor: [10, 30],
+      popupAnchor: [1, -34]
+      
+  });
+            
+            
+            var map = L.map('map').setView([40.04443758, -13.44726562], 2);
+          var NewOrleans = L.marker([29.951255, -90.077158], {icon: greenIcon}).addTo(map);
+          var Dhaka = L.marker([23.762321, 90.378737], {icon: greenIcon}).addTo(map);
         
   var popup = "New Orleans";
 NewOrleans.bindPopup(popup);
