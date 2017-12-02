@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Ropa+Sans);
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
 
 /*Text*/
 H2 {font-family: 'Ropa Sans', sans-serif; 
@@ -11,6 +12,12 @@ H3 {font-family: 'Ropa Sans', sans-serif;
     font-size: 22px; 
     color: white;
     text-align: center
+}
+
+p {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+    text-align-last: right;
 }
 
 /*Menu bar*/
@@ -92,6 +99,8 @@ H3 {font-family: 'Ropa Sans', sans-serif;
     height:300px;
     background-color:lightgrey;
     padding-top:30px;
+    padding-left:30px;
+    padding-right:30px
 }
 
 #introGD{
@@ -138,6 +147,7 @@ H3 {font-family: 'Ropa Sans', sans-serif;
 #ondergrondInhoud{
     height:150px;
     background-color:#00A978;  
+    padding-top:30px;
 }
 
 #content5{
@@ -152,7 +162,7 @@ H3 {font-family: 'Ropa Sans', sans-serif;
 
 #verstedelijkingInhoud{
     height:150px;
-    background-color:C7705C; 
+    background-color:C7705C;
 }
 
 /*Leaflet map
