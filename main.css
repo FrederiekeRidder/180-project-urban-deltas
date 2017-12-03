@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Ropa+Sans);
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
 
 /*Text*/
 H2 {font-family: 'Ropa Sans', sans-serif; 
@@ -18,6 +18,10 @@ p {
     font-family: 'PT Sans Narrow', sans-serif;
     color: white;
     text-align-last: right;
+}
+
+#footer {
+    color: black;
 }
 
 /*Menu bar*/
@@ -125,7 +129,8 @@ p {
 #MississippiLandLoss{
     height:300px;
     background-color:#87C4A5;
-    padding:0
+    padding:0;
+    text-align: center;
 }
 
 #MississippiGIF{
