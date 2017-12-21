@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
    crossorigin=""/>
+        
         <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
         
     </head>
@@ -79,8 +80,11 @@
           <button onclick="topFunction()" id="myBtn" title="Go to top"><h3>^</h3></button>
 
           <!--<Leaflet map>-->
-
+<script src="GeoJson/bangFloods.geojson"></script>
+          
+          
         <script>
+            
             //initialize the map         
   var greenIcon = new L.Icon({
       iconUrl: '/Images/markerGreen.png',
@@ -125,14 +129,10 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
             
+    L.geoJSON(bangFloods).addTo(map);
+            
 </script>
           
-<!--       <div id="secondContentRow" class="row">-->
-<!--            <div id="content5" class="col-md-3">Content blok</div>-->
-<!--            <div id="content6" class="col-md-3">Content blok</div>-->
-<!--            <div id="verstedelijkingInhoud" class="col-md-6">Verstedelijking icon + inhoud</div>-->
-          
-<!--        </div>-->
 <!--        </marquee>-->
       
        <footer> 
@@ -140,6 +140,10 @@ function topFunction() {
       </footer>
           
       </div>
-         
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      
   </body>
 </html>
