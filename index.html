@@ -24,8 +24,12 @@
             <div id="tagline" class="col-md-6"><h2>Een halve wereld aan verschil onlosmakelijk verbonden</h2></div>
             <div id="menu" class="col-md-3">
                 <div class="row">
-                    <div id="menuDelta" class="col-md-6"><img id="iconVerstedelijking" src="Images/Icon-verstedelijking.png"/><h4>Delta risico's</h4></div>
-                    <div id="menuSocio" class="col-md-6"><h4>Sociaaleconomische risico's</h4></div>
+                    <div id="menuDelta" class="col-md-6 hoverMenu"><img class="hoverImage" id="iconDelta" src="Images/Delta-icon.png"/>
+                        <div class="hoverText"><h4>Delta risico's</h4></div>
+                    </div>
+                    <div id="menuSocio" class="col-md-6 hoverMenu"><img class="hoverImage center-block" id="iconSocio" src="Images/Socio-icon.png"/>
+                        <div class="hoverText"><h4>Sociaal<br>economische risico's</h4></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,7 +39,7 @@
         </div>
           
           <div id="deltaIntro" class="row">
-            <div id="introduction" class="col-md-6" style="overflow: auto"><h3>The world runs on water</h3>
+            <div id="introduction" class="col-md-6" ><h3>The world runs on water</h3>
             
                 <p class="tests" style="overflow: auto">Water ondersteunt sociaaleconomische ontwikkeling en het welzijn van de mens. Over de hele wereld woont de mens dan ook in groten getale in delta’s; een stelsel van aftakkingen van een rivier, voordat deze in zee uitmondt. <br><br>
                     
@@ -66,18 +70,13 @@
             </div>
         </div>
           
-        <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-12"></div>
-                <div class="col-md-12"></div>
-                <div class="col-md-12"></div>
-            </div>
-            <div class="col-md-6">
-                <div class="col-md-12"></div>
-                <div class="col-md-12"></div>
-                <div class="col-md-12"></div>
-            </div>
-        </div>
+          <div class="row">
+              <div id="footerSpace" class="col-md-12"></div>
+          </div>
+          
+          <div class="row">
+              <div id="footerBar" class="col-md-12"></div>
+          </div>
 
           <!--<Scroll to top>-->
           <button onclick="topFunction()" id="myBtn" title="Go to top"><img id="logoScroll" src="Images/Logo_scroll.png"/>
@@ -90,7 +89,7 @@
             
     //initialize the map         
     var greenIcon = new L.Icon({
-        iconUrl: '/180-project-urban-deltas/Images/markerGreen.png',
+        iconUrl: '/Images/markerGreen.png',
         iconSize: [25, 35],
         iconAnchor: [10, 30],
         popupAnchor: [1, -34]  
@@ -223,7 +222,7 @@
 <!--        </marquee>-->
       
        <footer> 
-        <p id="footer">&copy; 2017 - Frederieke Ridder</p>
+        <p id="footer">&copy; 2018 - Frederieke Ridder</p>
       </footer>
           
       </div>

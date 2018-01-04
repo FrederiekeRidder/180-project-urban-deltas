@@ -5,19 +5,19 @@
 H2 {font-family: 'Ropa Sans', sans-serif; 
     font-size: 22px; 
     color: #74388f;
-    text-align: center
+    text-align: center;
 }
 
 H3 {font-family: 'Ropa Sans', sans-serif; 
     font-size: 40px; 
     color: white;
-    text-align: center
+    text-align: left;
 }
 
 H4 {font-family: 'Ropa Sans', sans-serif; 
     font-size: 16px; 
     color: white;
-    text-align: center
+    text-align: center;
 }
 
 p {
@@ -33,7 +33,18 @@ p {
 }*/
 
 #footer {
-    color: black;
+    color: #74388f;
+}
+
+/*Hyperlinks*/
+a {
+    color: #74388f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9e7bb2;
+    text-decoration: underline;
 }
 
 /*Menu bar*/
@@ -64,21 +75,69 @@ p {
 
 #menuDelta{
     height:200px;
-    background-color:#C7705C;
-    padding-top:10px;
+    background-color:#00a978;
+    padding-top:45px;
     padding-bottom:10px;
     padding-left:20px;
     padding-right:20px;
 }
 
-#menuSocio{
-    height:200px;
-    background-color:#00A978;  
+#iconDelta{
+    width:inherit;
+    background-color:#00a978;
 }
 
-#iconVerstedelijking{
-    height:80px;
+#menuSocio{
+    height:200px;
+    background-color:#C7705C; 
+    padding-top:45px;
+    padding-bottom:0px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+#iconSocio{
+    width:inherit;
     background-color:#C7705C;
+}
+
+.center-block{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hoverMenu {
+    position: relative;
+}
+
+.hoverImage {
+    opacity: 1;
+    transition: .25s ease;
+}
+
+/*.hoverImage img {
+    display: block;
+    top: 50%;
+    left: 50%;
+}*/
+
+.hoverText {
+    position: absolute;
+    opacity: 0;
+    transition: .5s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.hoverMenu:hover .hoverImage {
+    opacity: 0.25;
+}
+
+.hoverMenu:hover .hoverText {
+    opacity: 1;
 }
 
 /*Leaflet block*/
@@ -97,8 +156,34 @@ p {
     background-color:#F0AD27;
     padding-top:30px;
     padding-left:30px;
-    padding-right:30px
+    padding-right:30px;
+        
+    overflow: auto;
 }
+
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f9daa5;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f6ca7f;
+    border-radius: 120px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #74388f; 
+}
+
 
 #transboundaryInfogr{
     height:300px;
@@ -160,7 +245,7 @@ p {
 
 #verstedelijkingInhoud{
     height:150px;
-    background-color:C7705C;
+    background-color:#C7705C;
 }
 
 /*Leaflet map
@@ -207,4 +292,16 @@ p {
 
 #logoScroll {
     padding-right: 2.5px;
+}
+
+/*Footer*/
+
+#footerSpace {
+    height:25px;
+    background-color:white;  
+}
+
+#footerBar {
+    height:150px;
+    background-color:black;  
 }
