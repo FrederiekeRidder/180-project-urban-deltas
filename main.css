@@ -4,12 +4,12 @@
 /*Text*/
 H2 {font-family: 'Ropa Sans', sans-serif; 
     font-size: 22px; 
-    color: #00A978;
+    color: #74388f;
     text-align: center
 }
 
 H3 {font-family: 'Ropa Sans', sans-serif; 
-    font-size: 22px; 
+    font-size: 40px; 
     color: white;
     text-align: center
 }
@@ -20,17 +20,17 @@ H4 {font-family: 'Ropa Sans', sans-serif;
     text-align: center
 }
 
-/* p {
+p {
     font-family: 'PT Sans Narrow', sans-serif;
     color: white;
-    text-align-last: right;
-}*/
-
-.tests {
-    font-family: 'PT Sans Narrow', sans-serif;
-    color: white;
-    text-align-last: right;
+    text-align-last: left;
+    padding-top: 50px;
 }
+/*.tests {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+    text-align-last: left;
+}*/
 
 #footer {
     color: black;
@@ -54,7 +54,7 @@ H4 {font-family: 'Ropa Sans', sans-serif;
 #tagline{
     height:100px;
     background-color:white;
-    padding-top:70px;
+    padding-top:80px;
 }
 
 #menu{
@@ -62,8 +62,8 @@ H4 {font-family: 'Ropa Sans', sans-serif;
     background-color:lightblue; 
 }
 
-#menuVerstedelijking{
-    height:120px;
+#menuDelta{
+    height:200px;
     background-color:#C7705C;
     padding-top:10px;
     padding-bottom:10px;
@@ -71,33 +71,14 @@ H4 {font-family: 'Ropa Sans', sans-serif;
     padding-right:20px;
 }
 
-#rechtsboven{
-    height:100px;
+#menuSocio{
+    height:200px;
     background-color:#00A978;  
-}
-
-#menuKlimaat{
-    height:100px;
-    background-color:#F0AD27; 
-    padding-top:10px;
-    padding-bottom:10px;
-    padding-left:20px;
-    padding-right:20px;
-}
-
-#rechtsonder{
-    height:100px;
-    background-color:#74388F; 
 }
 
 #iconVerstedelijking{
     height:80px;
     background-color:#C7705C;
-}
-
-#iconKlimaat{
-    height:80px;
-    background-color:#F0AD27;
 }
 
 /*Leaflet block*/
@@ -111,24 +92,24 @@ H4 {font-family: 'Ropa Sans', sans-serif;
     background-color:lightgrey;  
 }*/
 
-#introMRD{
+#introduction {
     height:300px;
-    background-color:lightgrey;
+    background-color:#F0AD27;
     padding-top:30px;
     padding-left:30px;
     padding-right:30px
 }
 
-#introGD{
+#transboundaryInfogr{
     height:300px;
     background-color:dimgrey;  
     padding-top:30px;
 }
 
 /*Content*/
-#klimaatInhoud{
+#deltaText{
     height:300px;
-    background-color:#F0AD27;
+    background-color:#00A978;
     padding-top:30px;
 }
 
@@ -161,9 +142,9 @@ H4 {font-family: 'Ropa Sans', sans-serif;
     background-color:#F6CA7F;  
 }
 
-#ondergrondInhoud{
+#socioText{
     height:150px;
-    background-color:#00A978;  
+    background-color:#C7705C;  
     padding-top:30px;
 }
 
@@ -188,6 +169,21 @@ H4 {font-family: 'Ropa Sans', sans-serif;
   width:100%;
 } */
 
+.legend {
+    line-height: 18px;
+    color: #555;
+    background-color: white;
+    padding: 8px;
+    opacity: 0.9;
+    border-radius: 2px;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
 
 /*Scroll to top */
 #myBtn {
@@ -198,13 +194,17 @@ H4 {font-family: 'Ropa Sans', sans-serif;
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: black; 
+    background-color: #74388f; 
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 100px; /* Rounded corners */
 }
 
 #myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
+    background-color: #9e7bb2; /* Add a dark-grey background on hover */
+}
+
+#logoScroll {
+    padding-right: 2.5px;
 }

@@ -9,6 +9,7 @@
    crossorigin=""/>
         
         <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+        <script src="GeoJson/bangFloods.geojson"></script>
         
     </head>
   <body>
@@ -20,15 +21,11 @@
             <div id="logo" class="col-md-3">
                 <div  class="col-md-3"><img id="logoPNG" src="Images/180-project-UD-logo.png"/></div> 
             </div>
-            <div id="tagline" class="col-md-6"><h2>180° project:<br>Een halve wereld aan verschil onlosmakelijk verbonden</h2></div>
+            <div id="tagline" class="col-md-6"><h2>Een halve wereld aan verschil onlosmakelijk verbonden</h2></div>
             <div id="menu" class="col-md-3">
                 <div class="row">
-                    <div id="menuVerstedelijking" class="col-md-6"><img id="iconVerstedelijking" src="Images/Icon-verstedelijking.png"/><h4>Verstedelijking</h4></div>
-                    <div id="rechtsboven" class="col-md-6">Ondergrond</div>
-                </div>
-                <div class="row">
-                    <div id="menuKlimaat" class="col-md-6"><img id="iconKlimaat" src="Images/Icon-klimaat.png"/></div>
-                    <div id="rechtsonder" class="col-md-6">Beleid</div>
+                    <div id="menuDelta" class="col-md-6"><img id="iconVerstedelijking" src="Images/Icon-verstedelijking.png"/><h4>Delta risico's</h4></div>
+                    <div id="menuSocio" class="col-md-6"><h4>Sociaaleconomische risico's</h4></div>
                 </div>
             </div>
         </div>
@@ -36,19 +33,25 @@
             <div id="map" class="col-md-12"></div>
             <!--<<div id="mapsGD" class="col-md-6">Leaflet kaart Ganges Delta</div>>-->
         </div>
-        
-        <div id="deltaIntro" class="row">
-            <div id="introMRD" class="col-md-6"><h3>Mississippi River Delta</h3>
+          
+          <div id="deltaIntro" class="row">
+            <div id="introduction" class="col-md-6" style="overflow: auto"><h3>The world runs on water</h3>
             
-                <p class="tests">De Mississippi vervoert al duizenden jaren sediment vanuit het noorden van de Verenigde Staten naar het zuiden waar de rivier in de staat Louisiana uitmondt in de Golf van Mexico. Er ontstond daar een delta doordat het sediment zich begon op te hopen en plantengroei zich ontwikkelde.
+                <p class="tests" style="overflow: auto">Water ondersteunt sociaaleconomische ontwikkeling en het welzijn van de mens. Over de hele wereld woont de mens dan ook in groten getale in delta’s; een stelsel van aftakkingen van een rivier, voordat deze in zee uitmondt. <br><br>
+                    
+                Delta’s liggen aan het uiteinde van watersystemen die nogal eens grensoverschrijdend zijn. Dit brengt verbondenheid met zich mee in de vorm van een complex web van onderlinge onafhankelijkheid op het gebied van milieu, politiek, economie en veiligheid. <br><br>
+                    
+                Dit speelt ook in de Ganges Brahmaputra Meghna Delta (GBMD) en de Mississippi River Delta (MRD). Twee verstedelijkte delta’s die aan het uiteinde liggen van gigantische grensoverschrijdende stroomgebieden. Dhaka (Bangladesh), de stedelijke kern van de GBMD, en New Orleans (Verenigde Staten), die van de MRD, liggen op onze wereldbol precies 180° uit elkaar. Aan de hand van een aantal indicatoren worden de beide Urban Delta’s binnen de thema’s Delta risico’s en Sociaaleconomische risico’s* met elkaar vergeleken. Hoe gaan de twee Urban Delta’s om met risico’s als relatieve zeespiegelstijging en blootstelling aan overstromingen en droogtes? En welke acties worden er ondernomen om de delta’s ook in de toekomst leefbaar te houden? <br><br>
+                    
+                <i>*De thema’s en indicatoren zijn afgeleid uit het <a href="http://www.geftwap.org" target="_blank">Transboundary Waters Assessment Programme (TWAP)</a> van o.a. de United Nations Environment Programme (UNEP) en de Global Environment Facility (GEF).</i>
                 </p>
                 
             </div>
-            <div id="introGD" class="col-md-6"><h3>Ganges Delta</h3></div>
+            <div id="transboundaryInfogr" class="col-md-6"><h3>Infographic? Transboundary River Basins</h3></div>
         </div>
         
         <div id="firstContentRow" class="row">
-            <div id="klimaatInhoud" class="col-md-3"><h3>Klimaat</h3>
+            <div id="deltaText" class="col-md-3"><h3>Delta risico's</h3>
                 <div class="col-md-3"></div></div>
             <div id="contentRow1" class="col-md-9">
                 <div class="row">
@@ -58,7 +61,7 @@
                 </div>
                 <div class="row">
                     <div id="content4" class="col-md-4">Content blok</div>
-                    <div id="ondergrondInhoud" class="col-md-8"><h3>Ondergrond</h3></div>
+                    <div id="socioText" class="col-md-8"><h3>Sociaaleconomische risico's</h3></div>
                 </div>
             </div>
         </div>
@@ -77,59 +80,143 @@
         </div>
 
           <!--<Scroll to top>-->
-          <button onclick="topFunction()" id="myBtn" title="Go to top"><h3>^</h3></button>
+          <button onclick="topFunction()" id="myBtn" title="Go to top"><img id="logoScroll" src="Images/Logo_scroll.png"/>
+          </button>
 
           <!--<Leaflet map>-->
-<script src="GeoJson/bangFloods.geojson"></script>
           
           
-        <script>
+<script>
             
-            //initialize the map         
-  var greenIcon = new L.Icon({
-      iconUrl: '/Images/markerGreen.png',
-      iconSize: [25, 35],
-      iconAnchor: [10, 30],
-      popupAnchor: [1, -34]
-      
-  });
+    //initialize the map         
+    var greenIcon = new L.Icon({
+        iconUrl: '/Images/markerGreen.png',
+        iconSize: [25, 35],
+        iconAnchor: [10, 30],
+        popupAnchor: [1, -34]  
+    });        
             
-            var map = L.map('map').setView([40.04443758, -13.44726562], 2);
-          var NewOrleans = L.marker([29.951255, -90.077158], {icon: greenIcon}).addTo(map);
-          var Dhaka = L.marker([23.762321, 90.378737], {icon: greenIcon}).addTo(map);
+    var map = L.map('map').setView([40.04443758, -13.44726562], 2);
+    var NewOrleans = L.marker([29.951255, -90.077158], {icon: greenIcon}).addTo(map);
+    var Dhaka = L.marker([23.762321, 90.378737], {icon: greenIcon}).addTo(map);
         
-  var popup = "New Orleans";
-NewOrleans.bindPopup(popup);
-  var popup = "Dhaka";
-Dhaka.bindPopup(popup);
+    var popup = "New Orleans";
+    NewOrleans.bindPopup(popup);
+    var popup = "Dhaka";
+    Dhaka.bindPopup(popup);
   
-  //Create baselayer - tiles         
-  var backgroundMap = L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png',{
+    //Create baselayer - tiles         
+    var backgroundMap = L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png',{
     attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
     maxZoom: 19
-    }
-  );
-  
-  backgroundMap.addTo(map);
+        }
+    );
+    backgroundMap.addTo(map);
     
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+    //GEOJSON
+    var geojson;
+    function getColor(d) {
+        d = parseFloat(d);
+        return d > 15  ? '#800026' :
+               d > 12.7  ? '#BD0026' :
+               d > 12  ? '#E31A1C' :
+               d > 11  ? '#FC4E2A' :
+               d > 7  ? '#FD8D3C' :
+               d > 4   ? '#FEB24C' :
+               d > 2   ? '#FED976' :
+                         'black';
+        }
+    
+    function style(feature) {
+    return {
+        fillColor: getColor(feature.properties.geolocations_stations_DangerLevel),
+        weight: 1,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+        };
+    }
+    //L.geoJSON(bangFloods,{style:style}).addTo(map);
+    
+    function highlightFeature(e) {
+        var layer = e.target;
 
-function scrollFunction() {
+        layer.setStyle({
+            weight: 5,
+            color: '#666',
+            dashArray: '3',
+            fillOpacity: 0.7
+        });
+
+        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+            layer.bringToFront();
+        }
+    }
+    
+    function resetHighlight(e) {
+        geojson.resetStyle(e.target);
+    }
+    function onEachFeature(feature, layer) {
+		layer.on({
+			mouseover: highlightFeature,
+			mouseout: resetHighlight,
+			
+		});
+	}
+
+	geojson = L.geoJson(bangFloods, {
+		style: style,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+    
+    //##### LEGENDA ######
+    
+    var legend = L.control({position: 'bottomright'});
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+			grades = [2, 4, 7, 11, 12, 12.7, 15],
+			labels = [],
+			from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+
+    
+    // ##### TOT HIER
+    
+    
+    
+    //Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
         document.getElementById("myBtn").style.display = "block";
     } else {
         document.getElementById("myBtn").style.display = "none";
     }
-}
+    }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
+    function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+    }
             
-    L.geoJSON(bangFloods).addTo(map);
             
 </script>
           
