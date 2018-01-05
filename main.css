@@ -151,6 +151,8 @@ a:hover {
     background-color:lightgrey;  
 }*/
 
+
+/*CONTENT*/
 #introduction {
     height:300px;
     background-color:#F0AD27;
@@ -186,12 +188,17 @@ a:hover {
 
 
 #transboundaryInfogr{
-    height:300px;
-    background-color:dimgrey;  
+    height:600px;
+    background-color:#e6e7e8;  
     padding-top:30px;
+    padding-bottom:30px;
 }
 
-/*Content*/
+#twapIndicators {
+    width: inherit;
+}
+
+
 #deltaText{
     height:300px;
     background-color:#00A978;
