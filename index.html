@@ -2,6 +2,13 @@
   <html>
     <head>
       <title> 180° project Urban Delta's </title>
+        
+        <meta name="description" content="Deze website vergelijkt twee Urban Delta's, de Ganges Brahmaputra Maghna Delta en de Mississippi River Delta, met elkaar op het gebied van Regio kwetsbaarheid en Sociaaleconomische kwetsbaarheid">
+        <meta name="keywords" content="urban delta, delta, Ganges Brahmaputra Maghna Delta, Mississippi River Delta">
+        <meta name="robots" content="all">
+        <meta http-equiv="language" content="NL">
+        <meta name="web_author" content="Frederieke Ridder">
+        
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
@@ -23,12 +30,22 @@
             <div id="tagline" class="col-md-6"><h2>Een halve wereld aan verschil onlosmakelijk verbonden</h2></div>
             <div id="menu" class="col-md-3">
                 <div class="row">
-                    <div id="menuDelta" class="col-md-6 hoverMenu"><img class="hoverImage" id="iconDelta" src="Images/Delta-icon.png"/>
-                        <div class="hoverText"><h4>Regio<br> kwetsbaarheid</h4></div>
+                    <div id="menuDelta" class="col-md-6 hoverMenu">
+                        <a href="#deltaText">
+                            <img class="hoverImage" id="iconDelta" style="width:100px;" src="Images/Delta-icon.png"/>
+                            <div class="hoverText"><h4>Regio<br> kwetsbaarheid</h4></div>
+                        </a>
                     </div>
-                    <div id="menuSocio" class="col-md-6 hoverMenu"><img class="hoverImage center-block" id="iconSocio" src="Images/Socio-icon.png"/>
-                        <div class="hoverText"><h4>Sociaal<br>economische kwetsbaarheid</h4></div>
+                    
+                    
+                    <div id="menuSocio" class="col-md-6 hoverMenu">
+                        <a href="#socioText">
+                            <img class="hoverImage center-block" id="iconSocio" style="width:100px;" src="Images/Socio-icon.png"/>
+                            <div class="hoverText"><h4>Sociaal<br>economische kwetsbaarheid</h4></div>
+                        </a>
                     </div>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -74,12 +91,12 @@
             </div>
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-md-4 imageblock"><img src="Images/MRD_1.png"></div>
+                    <div class="col-md-4 imageblock"><img src="Images/MRD_3.png"></div>
                     <div id="MississippiLandLoss" class="col-md-4"><img id="MississippiGIF" src="Images/Mississippi-land-loss.gif"/></div>
                     <div id="socioText" class="col-md-4"><h3>Sociaal<br>economische<br> kwetsbaarheid</h3></div>
                 </div>
                 <div class="row">
-                    <div id="content4" class="col-md-8">Content blok</div>
+                    <div id="content4" class="col-md-8 imageblock"><img src="Images/MRD_4.png"></div>
                     <div id="waterSource" class="col-md-4">
                         <h5>Economische afhankelijkheid van waterbronnen</h5>
                         <p class="tests" style="overflow: auto">The world runs on water. Veel landen zijn op economisch gebied in grote mate afhankelijk van grensoverschrijdende rivieren. Dit is niet anders in de MRD en de GBMD.<br><br>
@@ -92,31 +109,50 @@
             </div>
         </div>
           
-          <div class="row">
+        <div class="row">
             <div id="wetlandsText" class="col-md-6">
-                <div class="row" style="overflow: auto;">
-                    <h5>Ecologische bedreiging van drasland</h5>
-                    <p class="tests" >Onderzoek (TWAP) heeft uitgewezen dat geïndustrialiseerde landen een lager risico hebben op ecologische bedreiging van drasland dan landen in ontwikkeling. Dit komt door beleid en beheer dat de economische waarde van drasland met betrekking tot toerisme, biodiversiteit, hydrologische functies en stormprotectie meeneemt. Hoewel de MRD wat betreft de ecologische bedreiging van drasland met een zeer laag risico wordt geclassificeerd, verwachten onderzoekers dat ook hier ecologische verstoringen op gaan treden. De combinatie van het verlies van drasland en toename van het zoutgehalte kan de vis- en schelpdierpopulatie doen afnemen.<br><br>
-                    Hoewel de GBMD in een minder geïndustrialiseerd land ligt dan de MRD wordt ook hier uitgegaan van een relatief laag risico op ecologische bedreiging van drasland. Voor de GBMD is de verwachting dat door relatieve zeespiegelstijging zeewater steeds verder landinwaarts kan komen en dit kustecosystemen die afhankelijk zijn van zoet of brak water gaat verplaatsen.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-md-6"></div>
-                    <div id="populationText" class="col-md-6">
-                    <h5>Populatiedruk</h5>
-                    </div>
-                </div>
+                <h5>Ecologische bedreiging van drasland</h5>
+                <p class="tests" style="overflow: auto">Onderzoek (TWAP) heeft uitgewezen dat geïndustrialiseerde landen een lager risico hebben op ecologische bedreiging van drasland dan landen in ontwikkeling. Dit komt door beleid en beheer dat de economische waarde van drasland met betrekking tot toerisme, biodiversiteit, hydrologische functies en stormprotectie meeneemt. Hoewel de MRD wat betreft de ecologische bedreiging van drasland met een zeer laag risico wordt geclassificeerd, verwachten onderzoekers dat ook hier ecologische verstoringen op gaan treden. De combinatie van het verlies van drasland en toename van het zoutgehalte kan de vis- en schelpdierpopulatie doen afnemen.<br><br>
+                Hoewel de GBMD in een minder geïndustrialiseerd land ligt dan de MRD wordt ook hier uitgegaan van een relatief laag risico op ecologische bedreiging van drasland. Voor de GBMD is de verwachting dat door relatieve zeespiegelstijging zeewater steeds verder landinwaarts kan komen en dit kustecosystemen die afhankelijk zijn van zoet of brak water gaat verplaatsen.<br><br><br><br>
+                    
+                <i>NB: lay out technisch is de opmaak van dit blok niet zoals de bedoeling was. Er wordt nog naar een oplossing gezocht.</i>
+                </p>
             </div>
-            
-              <div class="col-md-3"></div>
+            <div class="col-md-3 imageblock"><img src="Images/GBMD_3.png"></div>
             <div id="wellbeingText" class="col-md-3">
                 <h5>Maatschappelijk welzijn</h5>
                 <p class="tests" style="overflow: auto">Qua maatschappelijk welzijn als indicator voor sociaaleconomische kwetsbaarheid liggen de Ganges Brahmaputra Meghna Delta en de Mississippi River Delta dicht bij elkaar. <br><br>
-                Bangladesh leeft 24,3% van de bevolking onder de armoedegrens. In Louisiana geldt dit voor ongeveer 20% van de inwoners. Daar is het BNI op basis van koopkrachtpariteit 43.917 USD. In Bangladesh is dat  3.790 USD. Het onderzoek van TWAP wijst uit dat stroomgebieden met hoge economische afhankelijkheid van waterbronnen, lage niveaus van maatschappelijk welzijn en hoge kans op blootstelling aan overstromingen en droogtes hebben de hoogste kans op risico’s door klimaatverandering. Daaropvolgend zijn de mate van welzijn en bestuurscapaciteit ook aan elkaar te linken. In gebieden waar het maatschappelijk welzijn laag is, is het waarschijnlijk dat de bestuurscapaciteit om de kwetsbaarheid van bijvoorbeeld overstromingen aan te pakken ook laag is. Samenlevingen met lagere niveaus van economische ontwikkeling zijn naar verwachting kwetsbaarder voor economische verandering die het gevolg zijn van de beschikbaarheid van water en herstel na natuurrampen. 
-
+                In Bangladesh leeft 24,3% van de bevolking onder de armoedegrens. In Louisiana geldt dit voor ongeveer 20% van de inwoners. Daar is het Bruto Nationaal Inkomen op basis van koopkrachtpariteit 43.917 USD. In Bangladesh is dat  3.790 USD. Het onderzoek van TWAP wijst uit dat stroomgebieden met hoge economische afhankelijkheid van waterbronnen, lage niveaus van maatschappelijk welzijn en hoge kans op blootstelling aan overstromingen en droogtes hebben de hoogste kans op risico’s door klimaatverandering. Daaropvolgend zijn de mate van welzijn en bestuurscapaciteit ook aan elkaar te linken. In gebieden waar het maatschappelijk welzijn laag is, is het waarschijnlijk dat de bestuurscapaciteit om de kwetsbaarheid van bijvoorbeeld overstromingen aan te pakken ook laag is. Samenlevingen met lagere niveaus van economische ontwikkeling zijn naar verwachting kwetsbaarder voor economische verandering die het gevolg zijn van de beschikbaarheid van water en herstel na natuurrampen. 
                 </p>
             </div>
           </div>
+          
+          <div class="row">
+            <div id="governanceText" class="col-md-3">
+                <h5>Beleid en beheer</h5>
+                <p class="tests" style="overflow: auto">Zoals gezegd zijn de MRD en de GBMD onderdeel van grensoverschrijdende stroomgebieden. Beleid en beheer in delta’s gaat dan ook over samenwerking op verschillende niveaus, met allerlei soorten stakeholders, over een breed scala aan onderwerpen.<br><br> 
+                In de MRD wordt hier veel aandacht aan besteed. Sinds orkaan Katrina in 2005 de regio ernstig verwoestte, wordt gezocht naar duurzame oplossingen om de regio toekomstbestendig in te richten. De belangrijkste speerpunten hierbij zijn om bij een grote toevoer aan water, zoals bij heftige regenval, het ruimte te bieden en tijdelijk op te slaan. Wanneer de toevoer afneemt, kan het water dan geleidelijk worden gecirculeerd en weggeleid. Ook is het doel de Mississippi weer te verbinden met de delta en daardoor sediment land te laten opbouwen. <br><br>
+                Bangladesh is een land in ontwikkeling: gemiddeld groeit de economie nu met 6% per jaar en het land is op weg naar gemiddeld een middenklasse inkomen in 2021. Samen met de hoge populatiedruk staat de GBMD voor grote uitdagingen. Om de delta leefbaar te houden, waarbij de nadruk ligt op ruimte voor de mens, water en ecosystemen, wordt gewerkt aan het Bangladesh Delta Plan 2100. Dit gebeurt in samenwerking met Nederland. Er is veel aandacht om verschillende stakeholders van verschillende lagen in de hele regio te betrekken om mismanagement te voorkomen.<br><br> 
+                Voor beide delta’s is het dus van het grootste belang dat grensoverschrijdend beleid en beheer wordt toegepast. Alleen op die manier kunnen de delta’s ook in de toekomst leefbaar blijven. <br><br>
+                </p>
+            </div>
+              
+            <div id="populationText" class="col-md-3">
+                <h5>Populatiedruk</h5>
+                <p class="tests" style="overflow: auto">De GBMD is ’s werelds meest bevolkte delta. In Dhaka wonen 14,4 miljoen mensen, in agglomeratie eromheen nog eens 19 miljoen. De grensoverschrijdende delta kent een oppervlakte van 110.000 km2 met een bevolking van meer dan 140 miljoen mensen. De bevolkingsdichtheid is dan ook ruim 1200 mensen per km2. De populatiedruk in de regio is zeer hoog: de bevolking groeit met 1,12% per jaar.<br>
+                De MRD kent een hele andere mate van populatiedruk. De delta beslaat 18.020,5 km2 en er wonen 1,4 miljoen mensen. De bevolkingsdichtheid is gemiddeld 78 mensen per km2. In New Orleans wonen een kleine 400.000 mensen. De bevolking van Louisiana groeit met 0,4% per jaar. De urbane delen van de staat, zoals New Orleans, groeien harder.<br><br>
+                Populatiedruk zorgt voor uitdagingen als het gaat om grondstof-, water en landgebruik. Watersystemen zullen in de grensoverschrijdende gebieden van beide delta’s steeds meer onder druk komen te staan, waardoor het belang van goed bestuur toeneemt.
+                </p>
+            </div>
+              
+            <div id="floodsText" class="col-md-6">
+                <h5>Blootstelling aan overstromingen en droogtes</h5>
+                <p class="tests" style="overflow: auto"> Door de gevolgen van wereldwijde klimaatverandering lopen beide delta’s risico’s op het gebied van blootstelling aan overstromingen en droogtes. Bangladesh kampt vaker met onregelmatige neerslag en meer toevoer van water door smeltende gletsjers in de Himalaya. Minder neerslag in het droge seizoen kan het zoutgehalte in rivieren versterkt verhogen door zeewater wat stroomopwaarts beweegt tijdens perioden van lage stroming. <br><br>
+                In de MRD zorgen de wegvallende draslanden, veroorzaakt door de relatieve zeespiegelstijging, voor het verdwijnen van de natuurlijke kustbescherming. Extreem weer, wat de regio vaak teistert, kan zo meer schade veroorzaken en zorgen voor overstromingen. New Orleans ontvangt nu vaak meer regen dan de bestaande drainagesystemen kunnen wegvoeren. Geschat wordt dat overstromingen door regenval de stad in de komende vijftig jaar 8 miljard aan schade berokkent. Ook Highway 1 is in gevaar en wordt nu opgehoogd tot boven het 1 op de 500 jaar overstromingsrisico. Highway 1 is de enige weg die Port Fourchon, waar 75% van de olie- en gasproductie binnenkomt, verbindt met de rest van het land.
+                </p>
+            </div>
+          </div>
+        </div>  
           
           <!--<div class="row">
               <div id="footerSpace" class="col-md-12"></div>
@@ -137,7 +173,7 @@
             
     //initialize the map         
     var greenIcon = new L.Icon({
-        iconUrl: '/180-project-urban-deltas/Images/markerGreen.png',
+        iconUrl: '/Images/markerGreen.png',
         iconSize: [25, 35],
         iconAnchor: [10, 30],
         popupAnchor: [1, -34]  

@@ -24,7 +24,11 @@ H5 {font-family: 'Ropa Sans', sans-serif;
     font-size: 22px; 
     color: white;
     text-align: left;
-    
+}
+
+H6 {font-family: 'Ropa Sans', sans-serif; 
+    font-size: 16px; 
+    color: white;
 }
 
 p {
@@ -184,17 +188,27 @@ a:hover {
 }
 
 #wetlandsText {
-    height:300px;
+    height:600px;
     background-color:#00a978;
     padding-top:30px;
     padding-left: 30px;
     padding-right: 30px;
+    
     
 }
 
 #populationText {
     height:300px;
     background-color:#87c4a5;
+    padding-top:30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: auto;
+}
+
+#governanceText {
+    height:300px;
+    background-color:#aed4c0;
     padding-top:30px;
     padding-left: 30px;
     padding-right: 30px;
@@ -283,6 +297,16 @@ a:hover {
 #wellbeingText {
     height:600px;
     background-color:#C7705C;
+    color: white;
+    padding-top:30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: auto;
+}
+
+#floodsText{
+    height:300px;
+    background-color:#d9a08e;
     color: white;
     padding-top:30px;
     padding-left: 30px;
