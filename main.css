@@ -20,6 +20,13 @@ H4 {font-family: 'Ropa Sans', sans-serif;
     text-align: center;
 }
 
+H5 {font-family: 'Ropa Sans', sans-serif; 
+    font-size: 22px; 
+    color: white;
+    text-align: left;
+    
+}
+
 p {
     font-family: 'PT Sans Narrow', sans-serif;
     color: white;
@@ -163,6 +170,37 @@ a:hover {
     overflow: auto;
 }
 
+.imageblock {
+    padding: 0 !important;
+}
+
+#seariseText {
+    height:600px;
+    background-color:#87c4a5;
+    padding-top:30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: auto;
+}
+
+#wetlandsText {
+    height:300px;
+    background-color:#00a978;
+    padding-top:30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+#populationText {
+    height:300px;
+    background-color:#87c4a5;
+    padding-top:30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: auto;
+}
+
 
 /* SCROLLBAR */
 /* width */
@@ -172,12 +210,12 @@ a:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f9daa5;
+    background: #f1f1f2;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #f6ca7f;
+    background: #808284;
     border-radius: 120px;
 }
 
@@ -203,16 +241,12 @@ a:hover {
     height:300px;
     background-color:#00A978;
     padding-top:30px;
-}
-
-#content1{
-    height:300px;
-    background-color:black; 
-    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #MississippiLandLoss{
-    height:300px;
+    width:inherit;
     background-color:#87C4A5;
     padding:0;
     text-align: center;
@@ -220,40 +254,42 @@ a:hover {
 
 #MississippiGIF{
     height:250px;
-    background-color:#87C4A5;  
-}
-
-#content3{
-    height:300px;
-    background-color:black;
-    color: white;
+    background-color:#87C4A5; 
 }
 
 #content4{
-    height:150px;
+    height:300px;
     background-color:#F6CA7F;  
 }
 
 #socioText{
-    height:150px;
+    height:300px;
     background-color:#C7705C;  
     padding-top:30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-#content5{
-    height:150px;
-    background-color:#9E7BB2;  
+#waterSource{
+    height:300px;
+    background-color:#d9a08e;
+    color: white;
+    padding-top:30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: auto;
 }
 
-#content6{
-    height:150px;
-    background-color:#D9A08E;  
-}
-
-#verstedelijkingInhoud{
-    height:150px;
+#wellbeingText {
+    height:600px;
     background-color:#C7705C;
+    color: white;
+    padding-top:30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: auto;
 }
+
 
 /*Leaflet map
 #map { 
