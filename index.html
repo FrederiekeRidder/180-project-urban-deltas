@@ -18,7 +18,9 @@
         <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
         <script src="GeoJson/stroomgebiedGang.geojson"></script>
         <script src="GeoJson/deltaArea.geojson"></script>
+        <script src="GeoJson/stroomgebiedMis.geojson"></script>
         <script src="GeoJson/louCity.geojson"></script>
+        <script src="GeoJson/bangCity.geojson"></script>
         
     </head>
   <body>
@@ -154,6 +156,9 @@
                 </p>
             </div>
           </div>
+            <footer> 
+                <p id="footer">&copy; 2018 - Frederieke Ridder</p>
+            </footer>
         </div>  
           
           <!--<div class="row">
@@ -175,7 +180,7 @@
             
     //initialize the map         
     var greenIcon = new L.Icon({
-        iconUrl: '/180-project-urban-deltas/Images/markerGreen.png',
+        iconUrl: '/Images/markerGreen.png',
         iconSize: [25, 35],
         iconAnchor: [10, 30],
         popupAnchor: [1, -34]  
@@ -185,9 +190,9 @@
     var NewOrleans = L.marker([29.951255, -90.077158], {icon: greenIcon}).addTo(map);
     var Dhaka = L.marker([23.762321, 90.378737], {icon: greenIcon}).addTo(map);
         
-    var popup = "New Orleans";
+    var popup = "New Orleans / groen = stroomgebied Mississippi / geel =  delta / rood = verstdelijking";
     NewOrleans.bindPopup(popup);
-    var popup = "Dhaka";
+    var popup = "Dhaka / groen = stroomgebied Ganges, Brahmaputra en Maghna / geel =  delta / rood = verstdelijking";
     Dhaka.bindPopup(popup);
   
     //Create baselayer - tiles         
@@ -203,40 +208,42 @@
     
     function style(feature) {
     return {
-        fillColor: 'red',
+        fillColor: '#F0AD27',
         weight: 2,
-        opacity: 1,
-        color: 'red',
-        dashArray: '3',
-        fillOpacity: 0.7
+        opacity: 0.5,
+        color: '#F0AD27',
+        dashArray: '1.5',
+        fillOpacity: 0.5
     };
     }
     
     function style2(feature) {
     return {
-        fillColor: 'blue',
+        fillColor: '#C7705C',
         weight: 2,
-        opacity: 1,
-        color: 'blue',
-        dashArray: '3',
-        fillOpacity: 0.7
+        opacity: 0.8,
+        color: '#C7705C',
+        dashArray: '0',
+        fillOpacity: 0.8
     };
     }
     
     function style3(feature) {
     return {
-        fillColor: 'green',
+        fillColor: '#00a978',
         weight: 2,
-        opacity: 1,
-        color: 'blue',
+        opacity: 0.5,
+        color: '#00a978',
         dashArray: '3',
-        fillOpacity: 0.7
+        fillOpacity: 0.5
     };
     }
-    
-    /*L.geoJson(stroomgebieden, {style:style}).addTo(map);*/
-    
+     
     var stroomGang = L.geoJson(stroomgebiedGang, {
+		style: style3,
+	}).addTo(map);
+    
+    var stroomGang = L.geoJson(stroomgebiedMis, {
 		style: style3,
 	}).addTo(map);
     
@@ -249,7 +256,18 @@
 	}).addTo(map);
     
     
-    
+    var baCity = L.geoJSON(bangCity, {
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, {
+				radius: 4,
+				fillColor: "#C7705C",
+				color: "#C7705C",
+				weight: 1,
+				opacity: 0.65,
+				fillOpacity: 0.65
+			});
+		}
+    }).addTo(map);
     
     //Scroll to top button
     window.onscroll = function() {scrollFunction()};
@@ -270,9 +288,7 @@
             
 </script>
           
-       <footer> 
-        <p id="footer">&copy; 2018 - Frederieke Ridder</p>
-      </footer>
+
           
     
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
